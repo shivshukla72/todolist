@@ -3,6 +3,7 @@ $(document).ready(function(){
 
   	    var x= $("#addtask").val();
   	    console.log(x);
+  	    $("#addtask").val("");
        $("#ul1").append("<li><input type='checkbox' class='checkboxes'><span class='title'>"+x+"</span><input type='text' class='task'><button class='edit buttons'>Edit</button><button class='update buttons'>Update</button><button class='Delete buttons'>Delete</button></li>");
  
      $(".edit").click(function(){
@@ -20,7 +21,7 @@ $(document).ready(function(){
      $(".Delete").click(function(){
            $(this).parent('li').remove(); 
       });
-
+     
      $(".checkboxes").click(function(){
          if($(this).prop("checked")==true)
          	{
@@ -32,12 +33,7 @@ $(document).ready(function(){
               {
            	    var y=$(this).parent('li');
          		$("#ul1").append(y);
-               }
+              }
      });
-   
-
-  });
-
-
- 
+  }); 
 });
