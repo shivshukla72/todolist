@@ -3,7 +3,7 @@ $(document).ready(function(){
 
   	    var x= $("#addtask").val();
   	    console.log(x);
-       $("#ul1").append("<li><input type='checkbox' class='checkboxes'><span class='title'>"+x+"</span><input type='text' class='task'><button class='edit'>Edit</button><button class='update'>Update</button><button class='Delete'>delete</button></li>");
+       $("#ul1").append("<li><input type='checkbox' class='checkboxes'><span class='title'>"+x+"</span><input type='text' class='task'><button class='edit buttons'>Edit</button><button class='update buttons'>Update</button><button class='Delete buttons'>Delete</button></li>");
  
      $(".edit").click(function(){
         var z=$(this).parent().find('.title').text();
