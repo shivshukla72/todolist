@@ -12,16 +12,18 @@ $(document).ready(function(){
 
       });
      
-     $(".update").click(function(){
+     $(".update").off().click(function(){
      	var u=$(this).siblings('.task').val().trim();
+     	
      	console.log(u);
      	$(this).siblings('.title').text(u);
+     	$(this).siblings('.task').val("");
 
      });
      $(".Delete").click(function(){
            $(this).parent('li').remove(); 
       });
-     
+
      $(".checkboxes").click(function(){
          if($(this).prop("checked")==true)
          	{
